@@ -5,19 +5,20 @@
         }
 
 
-        protected void beginMovement() {
+        public void beginMovement() {
             System.out.println( " Я начинаю движение");
 
 
         }
 
 
-        protected void completeMovement() {
+        public void completeMovement() {
             System.out.println(" Я заканчиваю движение");
         }
 
         @Override
         public void repair() {
+            System.out.println("Заправляюсь");
 
         }
 

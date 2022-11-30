@@ -1,7 +1,7 @@
 import java.util.*;
 
 public abstract class Car {
-        public  String Categori;
+        public  String categori;
         private String Brand;
         private String Model;
         private double engineCapacity;
@@ -38,9 +38,9 @@ public abstract class Car {
             physicalSponsors = new HashSet<>();
 
 
-            if (model == null || model.isEmpty() || model.isBlank())
+            if (model == null ||  model.isBlank())
                 System.out.println("Неверное значение");
-            if (brand == null || brand.isEmpty() || brand.isBlank())
+            if (brand == null ||  brand.isBlank())
                 System.out.println("Неверное значение");
             if (engineCapacity <= 0)
                 System.out.println("Неверное значение");
@@ -100,7 +100,7 @@ public abstract class Car {
             return engineCapacity;
         }
 
-        protected abstract void beginMovement();
+        public abstract void beginMovement();
 
         protected abstract void completeMovement();
 
