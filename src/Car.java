@@ -2,13 +2,13 @@ import java.util.*;
 
 public abstract class Car {
         public  String categori;
-        private String Brand;
-        private String Model;
+        private String brand;
+        private String model;
         private double engineCapacity;
         public static final String CATEGORI_B = "Категория Б";
         public static final String CATEGORI_С = "Категория С";
         public static final String CATEGORI_D = "Категория D";
-        private Set<Car> Race;
+        private Set<Car> race;
         private Set<Driver> drivers;
         private Set<Mechanik> mechanics;
         private Set<LegalSponsor> legalSponsors;
@@ -28,10 +28,10 @@ public abstract class Car {
         }
 
         public Car(String brand, String model, double engineCapacity) {
-            Brand = brand;
-            Model = model;
+            brand = brand;
+            model = model;
             this.engineCapacity = engineCapacity;
-            Race = new HashSet<>();
+            race = new HashSet<>();
             drivers = new HashSet<>();
             mechanics = new HashSet<>();
             legalSponsors = new HashSet<>();
@@ -85,15 +85,15 @@ public abstract class Car {
     }
 
     public Set<Car> getRace() {
-            return Race;
+            return race;
         }
 
         public String getBrand() {
-            return Brand;
+            return brand;
         }
 
         public String getModel() {
-            return Model;
+            return model;
         }
 
         public double getEngineCapacity() {
