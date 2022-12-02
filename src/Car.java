@@ -1,14 +1,14 @@
 import java.util.*;
 
 public abstract class Car {
-        public  String Categori;
-        private String Brand;
-        private String Model;
+        public  String categori;
+        private String brand;
+        private String model;
         private double engineCapacity;
         public static final String CATEGORI_B = "Категория Б";
         public static final String CATEGORI_С = "Категория С";
         public static final String CATEGORI_D = "Категория D";
-        private Set<Car> Race;
+        private Set<Car> race;
         private Set<Driver> drivers;
         private Set<Mechanik> mechanics;
         private Set<LegalSponsor> legalSponsors;
@@ -28,19 +28,19 @@ public abstract class Car {
         }
 
         public Car(String brand, String model, double engineCapacity) {
-            Brand = brand;
-            Model = model;
+            brand = brand;
+            model = model;
             this.engineCapacity = engineCapacity;
-            Race = new HashSet<>();
+            race = new HashSet<>();
             drivers = new HashSet<>();
             mechanics = new HashSet<>();
             legalSponsors = new HashSet<>();
             physicalSponsors = new HashSet<>();
 
 
-            if (model == null || model.isEmpty() || model.isBlank())
+            if (model == null ||  model.isBlank())
                 System.out.println("Неверное значение");
-            if (brand == null || brand.isEmpty() || brand.isBlank())
+            if (brand == null ||  brand.isBlank())
                 System.out.println("Неверное значение");
             if (engineCapacity <= 0)
                 System.out.println("Неверное значение");
@@ -85,22 +85,22 @@ public abstract class Car {
     }
 
     public Set<Car> getRace() {
-            return Race;
+            return race;
         }
 
         public String getBrand() {
-            return Brand;
+            return brand;
         }
 
         public String getModel() {
-            return Model;
+            return model;
         }
 
         public double getEngineCapacity() {
             return engineCapacity;
         }
 
-        protected abstract void beginMovement();
+        public abstract void beginMovement();
 
         protected abstract void completeMovement();
 

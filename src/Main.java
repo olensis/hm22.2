@@ -50,12 +50,6 @@ public class Main {
         System.out.println("Водители:");
         for (Driver<?> driver : car.getDrivers()) {
             System.out.println(driver.getFio());
-            //  System.out.println("Спонсоры:");
-            // for (physicalSponsor<?> physicalSponsor : car.getPhysicalSponsors()) {
-            //   System.out.println(physicalSponsor.getName() + physicalSponsor.getAmount());
-                //System.out.println("Спонсоры:");
-              //  for (LegalSponsor<?> legalSponsor : car.getLegalSponsors()) {
-                //    System.out.println(legalSponsor.getCompanyName() + legalSponsor.getAmount());
                     System.out.println("Механики :");
                     for (Mechanik<?> mechanik : car.getMechanics()) {
                         System.out.println(mechanik.getName() + mechanik.getSurname() + mechanik.getCompany());
